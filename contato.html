@@ -19,36 +19,46 @@
     </nav>
     </center>
     <center><h2>Contato</h2></center>
-    <form action="enviaemail.cs" method="POST" accept-charset="utf-8">
+    <form action="enviaemail.cs" method="POST" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
         <label><b>Nome</b></label>
-        <input type="text" name="nome">
+        <br><input type="text" name="nome"><br>
 
         <label><b>Email</b></label>
-        <input type="email" name="email">
+        <br><input type="email" name="email"><br>
 
+        <br><label><b>Estado</b></label><br>
         <select name="Estado">
             <option value="">Selecione seu Estado</option>
-            <option value="SC">Santa Catarina</option> 
+            <option value="SC" selected>Santa Catarina</option> 
             <option value="PR">Paraná</option> 
             <option value="RS">Rio Grande do Sul</option>
         </select>
 
+        <br><label><b>Data</b></label><br>
         <input type="datetime-local" name="data">
 
-        <label><B>Sexo:</B></label>
+        <br><label><B>Sexo:</B></label><br>
         Masculino <input type="radio" name="sexo" value="M">
-        Feminino <input type="radio" name="sexo" value="F">
+        <br>Feminino <input type="radio" name="sexo" value="F"><br>
 
-        <label><b>Senha</b></label>
-        <input type="password" name="senha">
+        <br><label><b>Senha</b></label><br>
+        <input type="password" name="senha" minlength="8" maxlength="20">
 
-        <label>Comidas</label>
+        <br><label><b>Foto</b></label></br>
+        <input type="file" name="foto" multiple>
+
+        <br><label><b>Mensagem</b></label></br>
+        <textarea name="mensagem"></textarea>
+
+        <input type="hidden" name="codigoIbge" value="1058483">
+
+        <br><label><b>Comidas</b></label><br>
         <input type="checkbox" name="comida" value="Lasanha">Lasanha
         <input type="checkbox" name="comida" value="Pizza">Pizza
         <input type="checkbox" name="comida" value="Hambúrguer">Hambúrguer
         <input type="checkbox" name="comida" value="Batata Frita">Batata Frita
         
-        <button type="submit">Enviar</button>
+        <br><button type="submit">Enviar</button><br>
         <input type="reset" name="enviar" value="Cancelar">  
     </form>
 </body>
