@@ -2,6 +2,8 @@
 html, body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 *{
     font-family: 'Dosis', sans-serif;
@@ -12,7 +14,7 @@ nav{
     top: 0; 
     width: 100%;
     height: 64px;
-    background-color: #4b280a;
+    background-color: #0c0c47;
 }
 .logosite{
     float: left;
@@ -41,12 +43,13 @@ main{
 
 .homeArticle{
     width: 43%;
-    background-color: #f1efef;
+    background-color: #e5e6ff;
     margin: 5px 2%;
     border-radius: 15px;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
     padding: 15px;
     display: inline-block;
+    min-height: 190px;
 }
 .homeArticle img{
     float: left;
@@ -61,21 +64,66 @@ main{
 
 .homeArticle p{
     font-style: italic;
+    min-height: 80px;
 }
 .homeArticle a{
-    display: inline-block;
     width: auto;
-    padding: 4px;
-    background: #4b280a;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-radius: 9px;
+    display: inline-block;
+    position: relative;
     float: right;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #0c0c47;
+    border-radius: 9px;
     transition: 0.15s padding ease-out, 0.15s border-radius ease-out, 0.15s border ease-out;
+    bottom: 5px;
 }
 .homeArticle a:hover{
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
     padding: 6px;
     border-radius: 10px;
     transition: 0.15s padding ease-out, 0.15s border-radius ease-out, 0.15s border ease-out;
+}
+
+/*estilos do carousel*/
+.carousel{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+.carousel li{
+    width: 23%;
+    margin: 1%;
+    list-style: none;
+    float: right;
+}
+.carousel li img{
+    width: 100%;
+    border-radius: 9px;
+}
+/*estilos do rodapé*/
+footer{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    background-color: #0c0c47;
+}
+footer span{
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    color: #FFFFFF;
+}
+footer .assinatura{
+    text-align: right;
+}
+footer .assinatura a{
+    color: #ccc;
+    text-decoration: none;
 }
