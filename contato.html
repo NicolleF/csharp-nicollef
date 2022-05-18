@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Meu primeiro site</title>
+    <title>NiFor Tech</title>
 
 </head>
 <body>
@@ -19,53 +19,45 @@
             <a href="trabalheconosco.html">Trabalhe Conosco</a>
         </nav>
     </header>
-    <center><h2>Contato</h2></center>
-    <form action="enviaemail.cs" method="POST" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
-        <label><b>Nome</b></label>
-        <input type="text" name="nome">
-
-        <label><b>Email</b></label>
-        <input type="email" name="email">
-
-        <label><b>Estado</b></label>
-        <select name="Estado">
-            <option value="">Selecione seu Estado</option>
-            <option value="SC" selected>Santa Catarina</option> 
-            <option value="PR">Paran&aacute;</option> 
-            <option value="RS">Rio Grande do Sul</option>
-        </select>
-
-        <label><b>Data</b></label>
-        <input type="datetime-local" name="data">
-        
-        <label><B>Sexo:</B></label>
-        Masculino <input type="radio" name="sexo" value="M">
-        Feminino <input type="radio" name="sexo" value="F">
-
-        <label><b>Senha</b></label>
-        <input type="password" name="senha" minlength="8" maxlength="20">
-
-        <label><b>Foto</b></label>
-        <input type="file" name="foto" multiple>
-
-        <label><b>Mensagem</b></label>
-        <textarea name="mensagem"></textarea>
-
-        <input type="hidden" name="codigoIbge" value="1058483">
-
-        <label><b>Comidas</b></label>
-        <input type="checkbox" name="comida" value="Lasanha">Lasanha
-        <input type="checkbox" name="comida" value="Pizza">Pizza
-        <input type="checkbox" name="comida" value="Hamb&uacute;rguer">Hamb&uacute;rguer
-        <input type="checkbox" name="comida" value="Batata Frita">Batata Frita
-        
-        <button type="submit">Enviar</button>
-        <input type="reset" name="enviar" value="Cancelar">  
-    </form>
+    <main>
+        <center><h2>Contato</h2></center>
+            <form action="enviaemail.cs" method="POST" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data">
+                <div class="formInfo inteiro">
+                    <label><b>Nome</b></label>
+                    <input type="text" name="nome">
+                </div>
+                <div class="formInfo metade">
+                    <label><b>Email</b></label>
+                    <input type="email" name="email">
+                </div>
+                <div class="formInfo metade">
+                    <label><b>WhatsApp</b></label>
+                    <input type="tel" name="tel">
+                </div>
+                <div class="formInfo inteiro">
+                    <label class="seletor"><b>Setor</b></label>
+                    <select name="setor">
+                        <option value="">Selecione o setor para contato</option>
+                        <option value="RH">RH</option> 
+                        <option value="COMERCIAL">COMERCIAL</option> 
+                        <option value="FINANCEIRO">FINANCEIRO</option>
+                    </select>
+                </div>
+                <div class="formInfo inteiro">
+                    <label><b>Mensagem</b></label>
+                    <textarea name="mensagem"></textarea>
+                </div>
+                <div class="formInfo botao">
+                    <input type="hidden" name="codigoIbge" value="1058483">
+                    
+                    <button type="submit">Enviar</button> 
+                </div>
+                </form>
 
     <footer>
         <span class="direitos">2022 &copy; Todos os direitos reservados</span>
         <span class="assinatura">Feito por <a href="https://www.site.com.br" target="_blank">Nicolle Formigari Poncio</a></span>
     </footer>
+    </main>
 </body>
 </html>

@@ -1,12 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+html{
+    overflow-y: scroll;
+}
 html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 *{
     font-family: 'Dosis', sans-serif;
+}
+body{
+    background-color: #fff;
+}
+body.empresa{
+    background: url('../img/galaxia1.jpg') center fixed; /*apagar*/
+    color: #fff;
+}
+body.servicos{
+    background: unset;
+}
+body.servicos video{ /*apagar ou modificar para o contexto do meu site ficticio*/
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    /*opacity: 0.4;*/
+}
+body.servicos .lente{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0.4;
+    z-index: -1;
+}
+main{
+    padding: 80px 0px;
 }
 nav{
     position: absolute;
@@ -15,6 +50,9 @@ nav{
     width: 100%;
     height: 64px;
     background-color: #0c0c47;
+}
+body.servicos nav{
+    background: rgb(78, 0, 0);
 }
 .logosite{
     float: left;
@@ -45,10 +83,11 @@ main{
     width: 43%;
     background-color: #e5e6ff;
     margin: 5px 2%;
+    display: inline-block;
+    float: left;
     border-radius: 15px;
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
     padding: 15px;
-    display: inline-block;
     min-height: 190px;
 }
 .homeArticle img{
@@ -106,6 +145,71 @@ main{
     width: 100%;
     border-radius: 9px;
 }
+/*pagina serviços*/
+body.servicos table{
+    width: 90%;
+    margin: 0 auto;
+    border: 0;
+    border: 1px solid #0c0c47;
+}
+body.servicos table td{
+    background: #FFFFFF;
+    padding: 4px;
+    border: unset;
+}
+/*cor sim, cor não - efeito zebrado*/
+body.servicos table tr:nth-child(odd) td{
+    background: #f5f5fb;
+}
+body.servicos table .titulo td{
+    background: #0c0c47 !important;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/*pagina contato*/
+form{
+   width: 600px;
+   min-height: 400px;
+   margin: 0 auto;
+   background-color: #0c0c47;
+}
+.formInfo{
+    width: 100%;
+    display: inline-block;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    color: #FFFFFF;
+}
+.formInfo input,
+.formInfo select,
+.formInfo textarea{
+    width: 100%;
+    height: 30px;
+	text-indent: 15px;
+}
+.formInfo textarea{
+	height: 60px;
+}
+.formInfo button{
+	width: 130px;
+	height: 40px;
+	background:#0c0c47;
+	border-color: #FFFFFF;
+	color:#FFFFFF;
+	font-size: 20px;
+} 
+.formInfo.metade{
+	width: 46.5%;
+}
+.formInfo.inteiro{
+	width: 95%;
+}
+.formInfo.botao{
+    margin: 30px 40%;
+}
 /*estilos do rodapé*/
 footer{
     width: 100%;
@@ -127,3 +231,4 @@ footer .assinatura a{
     color: #ccc;
     text-decoration: none;
 }
+
