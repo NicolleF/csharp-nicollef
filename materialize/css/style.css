@@ -10,3 +10,6 @@ main {
 .brand-logo img{
 width: 75px;
 }
+.listaPizza .card-image{
+    height: 200px !important;
+}
